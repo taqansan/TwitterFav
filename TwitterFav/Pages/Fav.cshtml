@@ -1,0 +1,19 @@
+﻿@page
+@model TwitterFav.Pages.FavModel
+@{
+}
+
+<h3>Fav</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="card-columns">
+            @foreach (var url in Model.UrlList)
+            {
+                <a href="@url.Url" target="_blank" class="card">
+                    <img class="card-img" src="@url.MediaUrl">
+                </a>
+            }
+        </div>
+    </div>
+</div>
